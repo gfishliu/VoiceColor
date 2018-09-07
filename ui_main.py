@@ -57,7 +57,11 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
+        #MainWindow.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
+        #MainWindow.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
+        MainWindow.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
+        #MainWindow.setWindowTitle("语音情感识别")
+        MainWindow.setFixedSize(MainWindow.width(), MainWindow.height())
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
